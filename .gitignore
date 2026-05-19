@@ -1,0 +1,8 @@
+/.tmp/
+/dist/
+*.log
+*.bak
+*.tmp
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
