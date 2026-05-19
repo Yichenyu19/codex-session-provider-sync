@@ -1,8 +1,8 @@
-# codex-session-provider-sync
+# Codex 会话同步器
 
-One-click Windows helper for Codex Desktop users who switch `model_provider` often and then find local conversations missing from the left sidebar.
+一个给 Codex Desktop 用的 Windows 小工具。你切换 `model_provider` 之后，点一下就能把本地未归档会话同步回当前供应商，左侧历史不容易“看不见”。
 
-It syncs unarchived local session metadata to the current provider in `%USERPROFILE%\.codex\config.toml`. It does not upload data, does not read message bodies for network use, does not run in the background, and does not register startup tasks.
+它只同步本机未归档会话元数据，不上传数据，不读取消息正文做网络用，不常驻后台，不注册开机自启。
 
 ## What It Does
 
@@ -20,23 +20,23 @@ Open PowerShell 7 in this folder, then run:
 pwsh.exe -NoProfile -ExecutionPolicy Bypass -File .\Install.ps1
 ```
 
-The installer copies the tool to:
+安装后，工具会复制到：
 
 ```text
 %LOCALAPPDATA%\CodexSessionProviderSync
 ```
 
-It also creates a desktop shortcut:
+同时创建桌面快捷方式：
 
 ```text
-Codex Session Provider Sync
+Codex 会话同步器
 ```
 
 ## Daily Use
 
-After switching Codex provider, double-click the desktop shortcut. A PowerShell window will show the target provider, updated thread count, updated session file count, and backup directory.
+切换 Codex 供应商后，双击桌面快捷方式。PowerShell 窗口会显示目标供应商、更新数量和备份目录。
 
-If Codex is actively writing state and the database stays locked, close Codex and click the shortcut again.
+如果 Codex 正在写状态导致数据库被锁住，关掉 Codex 再点一次就行。
 
 ## Manual Commands
 
@@ -72,7 +72,7 @@ From the installed directory or the downloaded project folder:
 pwsh.exe -NoProfile -ExecutionPolicy Bypass -File .\Uninstall.ps1
 ```
 
-Uninstall removes the desktop shortcut and installed tool files. It does not remove `.codex` data or backups.
+卸载只删快捷方式和安装文件，不删 `.codex` 数据和备份。
 
 ## Boundaries
 

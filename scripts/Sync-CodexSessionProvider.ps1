@@ -400,14 +400,14 @@ try {
     })
 } catch {
     Write-Host ""
-    Write-Host "Codex Session Provider Sync failed:" -ForegroundColor Red
+    Write-Host "Codex 会话同步器失败:" -ForegroundColor Red
     Write-Host $_.Exception.Message -ForegroundColor Red
     Write-Host ""
-    Write-Host "If Codex is open and actively writing state, close Codex and run the shortcut again." -ForegroundColor Yellow
+    Write-Host "如果 Codex 正在写状态，先关掉它，再点一次快捷方式。" -ForegroundColor Yellow
     exit 1
 } finally {
     if (-not $NoPause) {
         Write-Host ""
-        Read-Host "Press Enter to close"
+        Read-Host "按 Enter 关闭"
     }
 }

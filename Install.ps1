@@ -1,6 +1,6 @@
 param(
     [string]$InstallDir = $(Join-Path $env:LOCALAPPDATA "CodexSessionProviderSync"),
-    [string]$ShortcutName = "Codex Session Provider Sync"
+    [string]$ShortcutName = "Codex 会话同步器"
 )
 
 $ErrorActionPreference = "Stop"
@@ -44,7 +44,7 @@ $shortcut.WindowStyle = 1
 $shortcut.Description = "Sync Codex unarchived sessions to the current model_provider."
 $shortcut.Save()
 
-Write-Host "Installed Codex Session Provider Sync." -ForegroundColor Green
+Write-Host "已安装 Codex 会话同步器。" -ForegroundColor Green
 Write-Host "InstallDir: $InstallDir"
 Write-Host "Shortcut: $ShortcutPath"
-Write-Host "It does not register startup tasks and does not run in the background."
+Write-Host "它不会注册开机自启，也不会常驻后台。"
